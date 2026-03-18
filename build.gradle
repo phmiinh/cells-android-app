@@ -39,7 +39,7 @@ def versionProperties = new Properties()
 versionProperties.load(new FileInputStream(rootProject.file("versions.properties")))
 
 // Manage optional local sdk-java submodule
-def sdkJavaCheck = new File('sdk-java/build.gradle')
+def sdkJavaCheck = rootProject.file('sdk-java/build.gradle')
 
 // Expose custom properties to all modules in the project.
 ext {

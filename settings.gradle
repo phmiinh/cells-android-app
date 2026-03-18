@@ -13,7 +13,7 @@ def timestamp = new Date().format('yyyyMMddHHmm')
 println('[DEBUG] Starting init phase for ' + rootProject.name + ' at ' + timestamp)
 
 // Enable having the Java SDK in the same Android project via Git submodules.
-def sdkJavaCheck = new File('sdk-java/build.gradle')
+def sdkJavaCheck = new File(settingsDir, 'sdk-java/build.gradle')
 if (sdkJavaCheck.exists()) {
     include ':sdk-java'
 } else {
